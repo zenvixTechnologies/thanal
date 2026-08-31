@@ -8,7 +8,7 @@ interface FooterProps {
 export function Footer({ t }: FooterProps) {
   return (
     <>
-      <footer>
+      <footer className="site-footer">
         <div className="footer-top">
           <a href="#top" className="wordmark wordmark-footer" aria-label="THANAL home">
             <img src="/images/thanal-logo.png" alt="THANAL Charitable Society Logo" className="wordmark-logo" />
@@ -16,19 +16,33 @@ export function Footer({ t }: FooterProps) {
               THANAL<span className="wordmark-dot">.</span>
             </span>
           </a>
-          <p>{t.footer}</p>
-          <a className="text-link light" href="#top">
+          <p className="footer-description">{t.footer}</p>
+          <a className="text-link light footer-back-to-top" href="#top">
             {t.backToTop} <ArrowUpRight />
           </a>
         </div>
         <div className="footer-bottom">
-          <span>© 2026 THANAL – STEP (Reg No: A 542 / 04 Kommady Thumpoly)</span>
-          <span>{t.madeWithCare}</span>
+          <span className="footer-reg-number">© 2026 THANAL – STEP (Reg No: A 542 / 04 Kommady Thumpoly)</span>
+          <span className="footer-made-with">{t.madeWithCare}</span>
         </div>
       </footer>
-      <a className="mobile-join" href="#join">
-        {t.join}
-        <ArrowUpRight />
+
+      {/* Floating Animated Official WhatsApp Widget */}
+      <a
+        className="whatsapp-float-widget"
+        href="https://wa.me/919495575716?text=Hello%20THANAL,%20I%20would%20like%20to%20join%20the%20STEP%20community."
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Chat on WhatsApp"
+      >
+        <span className="whatsapp-float-ripple" />
+        <span className="whatsapp-float-badge">{t.whatsapp}</span>
+        <div className="whatsapp-float-circle">
+          <svg className="whatsapp-official-icon" viewBox="0 0 308 308" fill="currentColor">
+            <path d="M227.904 176.981c-0.6-0.288-23.054-11.345-27.044-12.781-3.99-1.436-6.898-2.155-9.806 2.155-2.909 4.311-11.273 14.184-13.818 17.062-2.545 2.879-5.091 3.235-9.582 0.999-4.49-2.236-18.966-6.993-36.126-22.288-13.355-11.903-22.373-26.6-25.002-31.109-2.628-4.509-0.279-6.945 1.968-9.176 2.022-2.008 4.49-5.24 6.736-7.859 2.246-2.619 2.994-4.49 4.49-7.485 1.496-2.994 0.748-5.617-0.374-7.859-1.122-2.242-9.806-23.633-13.43-32.355-3.529-8.497-7.14-7.348-9.806-7.485-2.545-0.13-5.454-0.157-8.362-0.157-2.909 0-7.632 1.091-11.622 5.454-3.99 4.363-15.265 14.938-15.265 36.425s15.629 42.239 17.818 45.148c2.189 2.909 30.761 46.974 74.524 65.882 10.409 4.497 18.533 7.182 24.871 9.198 10.457 3.324 19.975 2.855 27.494 1.733 8.384-1.251 25.803-10.548 29.432-20.729 3.629-10.181 3.629-18.895 2.545-20.729-1.084-1.834-3.991-2.946-8.481-5.182z"/>
+            <path d="M154.005 0C68.966 0 0 68.966 0 154.005c0 29.742 8.441 58.749 24.471 83.74L0 308l72.295-23.824c23.957 14.07 51.353 21.829 81.71 21.829 85.039 0 154.005-68.966 154.005-154.005C308.01 68.966 239.044 0 154.005 0zm0 280.957c-26.837 0-52.628-7.794-74.654-22.529l-5.361-3.567-47.532 15.666 15.93-46.368-3.666-5.836C22.61 195.074 14.37 175.145 14.37 154.005c0-76.994 62.641-139.635 139.635-139.635 76.994 0 139.635 62.641 139.635 139.635 0 76.994-62.641 139.635-139.635 139.635z"/>
+          </svg>
+        </div>
       </a>
     </>
   )

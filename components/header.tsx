@@ -19,7 +19,7 @@ export function Header({ t, lang, scrolled, menuOpen, setMenuOpen, toggleLang }:
     <>
       <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
         <a href="#top" className="wordmark" aria-label="THANAL home">
-          <img src="/images/thanal-logo.png" alt="THANAL Charitable Society Logo" className="wordmark-logo" />
+          <img src="/images/thanal-logo.png" alt="THANAL Society Logo" className="wordmark-logo" />
           <span>
             THANAL<span className="wordmark-dot">.</span>
           </span>
@@ -51,16 +51,49 @@ export function Header({ t, lang, scrolled, menuOpen, setMenuOpen, toggleLang }:
       </header>
 
       {menuOpen && (
-        <div className="mobile-menu">
-          {t.nav.map((n, i) => (
-            <a key={n} onClick={() => setMenuOpen(false)} href={navTargets[i]}>
-              {n}
-              <ArrowUpRight />
-            </a>
-          ))}
-          <button onClick={toggleLang}>
-            <Globe2 /> {lang === 'en' ? 'മലയാളം' : 'English'}
-          </button>
+        <div className="mobile-menu-overlay">
+          <div className="mobile-menu">
+            <div className="mobile-menu-header">
+              <a href="#top" className="wordmark" onClick={() => setMenuOpen(false)}>
+                <img src="/images/thanal-logo.png" alt="THANAL Logo" className="mobile-menu-logo" />
+                <span>THANAL<span className="wordmark-dot">.</span></span>
+              </a>
+              <button
+                className="mobile-menu-close"
+                onClick={() => setMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                <X />
+              </button>
+            </div>
+            
+            <nav className="mobile-menu-nav">
+              {t.nav.map((n, i) => (
+                <a
+                  key={n}
+                  onClick={() => setMenuOpen(false)}
+                  href={navTargets[i]}
+                  className="mobile-menu-link"
+                >
+                  <span>{n}</span>
+                  <ArrowUpRight />
+                </a>
+              ))}
+            </nav>
+
+            <div className="mobile-menu-footer">
+              <button
+                className="mobile-lang-btn"
+                onClick={() => {
+                  toggleLang()
+                  setMenuOpen(false)
+                }}
+              >
+                <Globe2 />
+                <span>{lang === 'en' ? 'മലയാളത്തിലേക്ക് മാറുക (മലയാളം)' : 'Switch to English'}</span>
+              </button>
+            </div>
+          </div>
         </div>
       )}
     </>
