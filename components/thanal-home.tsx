@@ -23,12 +23,31 @@ export function ThanalHome() {
   const [lang, setLang] = useState<Lang>('en')
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [activeSection, setActiveSection] = useState<string>('')
 
   const t = copy[lang]
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24)
-    window.addEventListener('scroll', onScroll)
+    const navTargets = ['about', 'activities', 'step', 'impact', 'gallery', 'contact']
+
+    const onScroll = () => {
+      setScrolled(window.scrollY > 24)
+
+      const scrollPosition = window.scrollY + 220
+      let current = ''
+
+      for (let i = navTargets.length - 1; i >= 0; i--) {
+        const elem = document.getElementById(navTargets[i])
+        if (elem && elem.offsetTop <= scrollPosition) {
+          current = navTargets[i]
+          break
+        }
+      }
+      setActiveSection(current)
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true })
+    onScroll()
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
@@ -44,6 +63,7 @@ export function ThanalHome() {
         t={t}
         lang={lang}
         scrolled={scrolled}
+        activeSection={activeSection}
         menuOpen={menuOpen}
         setMenuOpen={setMenuOpen}
         toggleLang={toggleLang}

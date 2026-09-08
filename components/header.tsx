@@ -7,13 +7,22 @@ interface HeaderProps {
   t: CopyType
   lang: Lang
   scrolled: boolean
+  activeSection: string
   menuOpen: boolean
   setMenuOpen: (open: boolean) => void
   toggleLang: () => void
 }
 
-export function Header({ t, lang, scrolled, menuOpen, setMenuOpen, toggleLang }: HeaderProps) {
-  const navTargets = ['#about', '#activities', '#step', '#impact', '#gallery', '#contact']
+export function Header({
+  t,
+  lang,
+  scrolled,
+  activeSection,
+  menuOpen,
+  setMenuOpen,
+  toggleLang,
+}: HeaderProps) {
+  const navTargets = ['about', 'activities', 'step', 'impact', 'gallery', 'contact']
 
   return (
     <>
@@ -25,11 +34,19 @@ export function Header({ t, lang, scrolled, menuOpen, setMenuOpen, toggleLang }:
           </span>
         </a>
         <nav className="desktop-nav">
-          {t.nav.map((n, i) => (
-            <a key={n} href={navTargets[i]}>
-              {n}
-            </a>
-          ))}
+          {t.nav.map((n, i) => {
+            const targetId = navTargets[i]
+            const isActive = activeSection === targetId
+            return (
+              <a
+                key={n}
+                href={`#${targetId}`}
+                className={isActive ? 'is-active' : ''}
+              >
+                {n}
+              </a>
+            )
+          })}
         </nav>
         <div className="header-actions">
           <button className="language-toggle" onClick={toggleLang} aria-label="Switch language">
@@ -68,17 +85,21 @@ export function Header({ t, lang, scrolled, menuOpen, setMenuOpen, toggleLang }:
             </div>
             
             <nav className="mobile-menu-nav">
-              {t.nav.map((n, i) => (
-                <a
-                  key={n}
-                  onClick={() => setMenuOpen(false)}
-                  href={navTargets[i]}
-                  className="mobile-menu-link"
-                >
-                  <span>{n}</span>
-                  <ArrowUpRight />
-                </a>
-              ))}
+              {t.nav.map((n, i) => {
+                const targetId = navTargets[i]
+                const isActive = activeSection === targetId
+                return (
+                  <a
+                    key={n}
+                    onClick={() => setMenuOpen(false)}
+                    href={`#${targetId}`}
+                    className={`mobile-menu-link ${isActive ? 'is-active' : ''}`}
+                  >
+                    <span>{n}</span>
+                    <ArrowUpRight />
+                  </a>
+                )
+              })}
             </nav>
 
             <div className="mobile-menu-footer">

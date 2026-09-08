@@ -1,4 +1,4 @@
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Users } from 'lucide-react'
 import type { CopyType } from '@/lib/copy'
 
 interface AboutSectionProps {
@@ -38,6 +38,23 @@ export function AboutSection({ t }: AboutSectionProps) {
             <span />
             <span>Today</span>
           </div>
+        </div>
+      </div>
+
+      <div className="office-bearers-container">
+        <div className="office-bearers-header">
+          <div className="office-bearers-badge">
+            <Users className="office-bearers-icon" />
+            <span>{t.officeBearersTitle}</span>
+          </div>
+        </div>
+        <div className="office-bearers-grid">
+          {t.officeBearers.map((bearer, idx) => (
+            <div className="bearer-card" key={idx}>
+              <span className="bearer-role">{bearer.role}</span>
+              <h4 className="bearer-name">{bearer.name}</h4>
+            </div>
+          ))}
         </div>
       </div>
     </section>
