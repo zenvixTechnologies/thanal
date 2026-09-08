@@ -19,7 +19,7 @@ export function JoinSection({ t, lang }: JoinSectionProps) {
       <div className="join-action-wrapper">
         <a
           className="whatsapp-btn whatsapp-btn-sm"
-          href="https://wa.me/919495575716?text=Hello%20THANAL,%20I%20would%20like%20to%20join%20the%20STEP%20community."
+          href="https://chat.whatsapp.com/DqaKMhfLWYv51PaoGsmLkT?s=sw&p=a&mlu=4&ilr=4"
           target="_blank"
           rel="noopener noreferrer"
         >

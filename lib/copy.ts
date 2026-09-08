@@ -125,24 +125,38 @@ export const copy: Record<'en' | 'ml', CopyType> = {
       },
       {
         id: 2,
-        title: 'Annual Scholarship Distribution',
+        title: 'Annual Educational Scholarship Distribution',
         category: 'Education',
-        image: '/images/scholarships.png',
+        image: '/images/scholarship-1.jpg',
         description: 'Empowering promising students from underprivileged families with annual educational scholarships and learning materials.'
       },
       {
         id: 3,
+        title: 'Scholarship Ceremony & Student Encouragement',
+        category: 'Education',
+        image: '/images/scholarship-2.jpg',
+        description: 'THANAL Charitable Society distributing annual scholarships and financial aid to deserving students at Kommady.'
+      },
+      {
+        id: 4,
+        title: 'Educational Financial Aid Presentation',
+        category: 'Education',
+        image: '/images/scholarship-3.jpg',
+        description: 'Supporting high-achieving students from poor families to pursue higher education without financial barriers.'
+      },
+      {
+        id: 5,
         title: 'Neighborhood Essential Aid Distribution',
         category: 'Community Support',
         image: '/images/community-care.png',
         description: 'Volunteers distributing essential food kits and home care support to elderly citizens across Kommady and Aryad wards.'
       },
       {
-        id: 4,
-        title: 'THANAL STEP Community Circle',
+        id: 6,
+        title: 'THANAL Public Function & Address',
         category: 'Solidarity',
-        image: '/images/thanal-community.png',
-        description: 'Philanthropists and local volunteers gathering together to support micro-contributions for urgent medical cases.'
+        image: '/images/scholarship-4.jpg',
+        description: 'Public meeting and scholarship distribution ceremony organized by THANAL Charitable Society.'
       }
     ],
     howLabel: 'How STEP works',
@@ -204,24 +218,38 @@ export const copy: Record<'en' | 'ml', CopyType> = {
       },
       {
         id: 2,
-        title: 'വാർഷിക സ്കോളർഷിപ്പ് വിതരണം',
+        title: 'വാർഷിക വിദ്യാഭ്യാസ സ്കോളർഷിപ്പ് വിതരണം',
         category: 'വിദ്യാഭ്യാസം',
-        image: '/images/scholarships.png',
+        image: '/images/scholarship-1.jpg',
         description: 'സാമ്പത്തികമായി പിന്നാക്കം നിൽക്കുന്ന കുടുംബങ്ങളിലെ മിടുക്കരായ വിദ്യാർത്ഥികൾക്ക് വാർഷിക വിദ്യാഭ്യാസ സ്കോളർഷിപ്പുകളും പുസ്തകങ്ങളും വിതരണം ചെയ്യുന്നു.'
       },
       {
         id: 3,
+        title: 'സ്കോളർഷിപ്പ് വിതരണവും കുടുംബ സംഗമവും',
+        category: 'വിദ്യാഭ്യാസം',
+        image: '/images/scholarship-2.jpg',
+        description: 'തണൽ ചാരിറ്റബിൾ സൊസൈറ്റിയുടെ നേതൃത്വത്തിൽ കൊമ്മാടിയിൽ നടന്ന വാർഷിക സ്കോളർഷിപ്പ് വിതരണവും കുടുംബ സംഗമവും.'
+      },
+      {
+        id: 4,
+        title: 'വിദ്യാർത്ഥി പ്രോത്സാഹന സാമ്പത്തിക സഹായം',
+        category: 'വിദ്യാഭ്യാസം',
+        image: '/images/scholarship-3.jpg',
+        description: 'ഉപരിപഠനം ഉറപ്പാക്കുന്നതിനായി നിർധന കുടുംബങ്ങളിലെ വിദ്യാർത്ഥികൾക്ക് നേരിട്ട് സാമ്പത്തിക സഹായം കൈമാറുന്നു.'
+      },
+      {
+        id: 5,
         title: 'അയൽക്കൂട്ട അവശ്യവസ്തു വിതരണം',
         category: 'കൂട്ടായ കരുതൽ',
         image: '/images/community-care.png',
         description: 'കൊമ്മാടി, ആര്യാട് വാർഡുകളിലെ നിർധന കുടുംബങ്ങൾക്കും മുതിർന്ന പൗരന്മാർക്കും ഭക്ഷണകിറ്റുകളും അവശ്യവസ്തുക്കളും എത്തിച്ചു നൽകുന്നു.'
       },
       {
-        id: 4,
-        title: 'THANAL STEP കൂട്ടായ്മ',
+        id: 6,
+        title: 'തണൽ സൊസൈറ്റി പൊതുസമ്മേളനം',
         category: 'ഐക്യദാർഢ്യം',
-        image: '/images/thanal-community.png',
-        description: 'അടിയന്തര ചികിത്സാ സഹായങ്ങൾക്കായി ചെറു സംഭാവനകൾ സമാഹരിക്കുന്ന തണൽ STEP വാട്സാപ്പ് കൂട്ടായ്മ.'
+        image: '/images/scholarship-4.jpg',
+        description: 'കൊമ്മാടിയിൽ നടന്ന തണൽ ചാരിറ്റബിൾ സൊസൈറ്റി പൊതുസമ്മേളനവും സഹായ വിതരണവും.'
       }
     ],
     howLabel: 'STEP എങ്ങനെ പ്രവർത്തിക്കുന്നു', howTitle: 'പങ്കിട്ട ആശങ്കയിൽ നിന്ന്\nപങ്കിട്ട പരിഹാരത്തിലേക്ക്.', steps: [['കേൾക്കുക', 'ഇതിനകം നിലനിൽക്കുന്ന ആവശ്യങ്ങളും ശക്തികളും മനസ്സിലാക്കുക.'], ['ഒരുമിക്കുക', 'ആളുകളെയും പങ്കാളികളെയും വിഭവങ്ങളെയും ഒരുമിപ്പിക്കുക.'], ['പ്രവർത്തിക്കുക', 'മുന്നേറ്റം സൃഷ്ടിക്കുന്ന പ്രായോഗിക ചുവടുകൾ എടുക്കുക.'], ['വളരുക', 'പഠിക്കുകയും പങ്കിടുകയും വലയം മുന്നോട്ട് കൊണ്ടുപോകുകയും ചെയ്യുക.']], trustLabel: 'എപ്പോഴും വിശ്വാസം', trustTitle: 'നല്ല പ്രവർത്തനങ്ങൾക്ക്\nതുറന്ന ജനാലകൾ വേണം.', trustCards: [['സ്ഥിരീകരിച്ച കഥകൾ', 'യഥാർത്ഥ ആളുകൾ. യഥാർത്ഥ യാത്രകൾ. സമ്മതത്തോടെ പങ്കിടുന്നു.'], ['സുതാര്യ പ്രവർത്തനം', 'ഞങ്ങളുടെ പ്രവർത്തനം ദൃശ്യവും അളക്കാവുന്നതും ഉത്തരവാദിത്തമുള്ളതുമാണ്.'], ['പ്രാദേശിക നേതൃത്വം', 'പ്രശ്നത്തിന് അടുത്തുള്ളവരാണ് പരിഹാരം രൂപപ്പെടുത്തുന്നത്.'], ['ദീർഘകാല കരുതൽ', 'ആദ്യ നാഴികക്കല്ലിന് ശേഷവും ഞങ്ങൾ കൂടെയുണ്ട്.']], storiesLabel: 'വലയത്തിൽ നിന്നുള്ള കഥകൾ', storiesTitle: 'മനുഷ്യരുടെ കഥകൾ,\nസ്ഥിതിവിവരക്കണക്കുകളല്ല.', storySoon: 'സ്ഥിരീകരിച്ച കഥ ഉടൻ', joinTitle: 'ഈ വലയത്തിൽ നിങ്ങൾക്കും ഇടമുണ്ട്.', joinBody: 'സമയം, കഴിവ്, കേൾക്കുന്ന മനസ്സ്, അല്ലെങ്കിൽ തുടങ്ങാനുള്ള സന്നദ്ധത—എന്തും കൊണ്ടുവരാം.', whatsapp: 'WhatsApp കൂട്ടായ്മയിൽ ചേരുക', objectivesTitle: 'ഞങ്ങൾ ലക്ഷ്യമിടുന്നത്', objectives: ['അന്തസ്സുള്ള ജീവിതങ്ങൾ', 'ആരോഗ്യമുള്ള സമൂഹങ്ങൾ', 'പരിധികളില്ലാത്ത പഠനം', 'ഐക്യത്തിന്റെ സംസ്കാരം'], contactTitle: 'അടുത്ത ചുവട് എടുക്കാം.', contactBody: 'ഒരു ചോദ്യം, പങ്കാളിത്ത ആശയം, അല്ലെങ്കിൽ പങ്കിടാനുള്ള കഥയുണ്ടോ? ഞങ്ങൾ കേൾക്കാൻ ആഗ്രഹിക്കുന്നു.', email: 'contact@thanal.org', phone: '+91 94955 75716', address: 'തണൽ ചാരിറ്റബിൾ സൊസൈറ്റി, കൊമ്മാടി, ആലപ്പുഴ, കേരളം 688008', footer: 'കൂടുതൽ അന്തസ്സുള്ള ലോകത്തിനായുള്ള ജനകീയ പ്രസ്ഥാനം.',

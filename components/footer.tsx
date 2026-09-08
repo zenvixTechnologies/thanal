@@ -30,7 +30,7 @@ export function Footer({ t }: FooterProps) {
       {/* Floating Animated Official WhatsApp Widget */}
       <a
         className="whatsapp-float-widget"
-        href="https://wa.me/919495575716?text=Hello%20THANAL,%20I%20would%20like%20to%20join%20the%20STEP%20community."
+        href="https://chat.whatsapp.com/DqaKMhfLWYv51PaoGsmLkT?s=sw&p=a&mlu=4&ilr=4"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Chat on WhatsApp"

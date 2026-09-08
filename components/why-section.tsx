@@ -5,6 +5,12 @@ interface WhySectionProps {
 }
 
 export function WhySection({ t }: WhySectionProps) {
+  const whyTitle = t.whyLabel === 'എന്തുകൊണ്ട് STEP'
+    ? 'ദാരിദ്ര്യത്തിനപ്പുറം,\nഅവസരങ്ങളുടെ വാതിൽ തുറക്കണം.'
+    : t.whyLabel === 'Why STEP'
+      ? 'Beyond poverty lies a door of opportunity, waiting to be opened.'
+      : t.whyTitle
+
   return (
     <section className="section why-section">
       <div className="why-image" />
@@ -14,7 +20,7 @@ export function WhySection({ t }: WhySectionProps) {
           <span className="line" />
         </div>
         <h2>
-          {t.whyTitle.split('\n').map((l, i) => (
+          {whyTitle.split('\n').map((l, i) => (
             <span key={l}>
               {l}
               {i === 0 && <br />}

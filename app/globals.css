@@ -25,11 +25,24 @@
 @media(max-width:640px){.office-bearers-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:400px){.office-bearers-grid{grid-template-columns:1fr}}
 
+/* Keep the primary page heading more compact across screen sizes. */
+.hero h1{font-size:clamp(36px,4.5vw,64px)}
+@media(max-width:800px){.hero h1{font-size:50px}}
+@media(max-width:430px){.hero h1{font-size:46px}}
 
+/* Malayalam hero heading */
+.font-malayalam .hero h1{font-size:clamp(24px,3.3vw,44px)}
+@media(max-width:800px){.font-malayalam .hero h1{font-size:clamp(24px,6.5vw,32px)}}
 
-
-
-
-
-
-
+@media(min-width:801px){.font-malayalam .about-section h2{font-size:clamp(34px,4vw,56px);line-height:1.18}}
+@media(min-width:801px){.font-malayalam .section-heading-row h2{font-size:clamp(34px,4vw,56px);line-height:1.18}}
+@media(min-width:801px){.font-malayalam .step-copy h2{font-size:clamp(34px,4vw,56px);line-height:1.18}}
+@media(min-width:801px){.font-malayalam .step-copy h2{max-width:620px;font-size:clamp(30px,3.2vw,48px);line-height:1.24;letter-spacing:-.01em}}
+@media(min-width:801px){.font-malayalam .step-copy h2{max-width:560px;font-size:clamp(26px,2.7vw,40px);line-height:1.32;letter-spacing:0}}
+@media(min-width:801px){.font-malayalam .why-copy h2{font-size:clamp(34px,4vw,56px);line-height:1.18}}
+@media(min-width:801px){.font-malayalam .why-copy h2{max-width:620px;font-size:clamp(32px,3.6vw,52px);line-height:1.28;letter-spacing:-.01em}}
+@media(min-width:801px){.font-malayalam .how-section h2{max-width:620px;font-size:clamp(34px,4vw,56px);line-height:1.18}}
+@media(min-width:801px){.font-malayalam .how-section h2 span{display:block;white-space:nowrap}}
+@media(min-width:801px){.font-malayalam .trust-section h2{max-width:620px;font-size:clamp(34px,4vw,56px);line-height:1.18}}
+@media(min-width:801px){.font-malayalam .trust-section h2 span{display:block;white-space:nowrap}}
+@media(min-width:801px){.font-malayalam .contact-section h2{max-width:620px;font-size:clamp(34px,4vw,56px);line-height:1.18}}
