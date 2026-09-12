@@ -178,10 +178,10 @@ export function StepSection({ t, lang }: StepSectionProps) {
                 type="button"
                 className={`toggle-btn ${viewMode === 'slider' ? 'active' : ''}`}
                 onClick={() => setViewMode('slider')}
-                title={lang === 'ml' ? 'കാർഡ് സ്ലൈഡർ' : 'Card Slider'}
+                title={lang === 'ml' ? 'ഘട്ടങ്ങൾ' : 'Card Slider'}
               >
                 <Layers className="w-4 h-4" />
-                <span>{lang === 'ml' ? 'കാർഡ് കാഴ്ച്ച' : 'Slider'}</span>
+                <span>{lang === 'ml' ? 'ഘട്ടങ്ങൾ' : 'Slider'}</span>
               </button>
               <button
                 type="button"
