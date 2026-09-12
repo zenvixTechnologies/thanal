@@ -20,7 +20,7 @@ import { ContactSection } from '@/components/contact-section'
 import { Footer } from '@/components/footer'
 
 export function ThanalHome() {
-  const [lang, setLang] = useState<Lang>('en')
+  const [lang, setLang] = useState<Lang>('ml')
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState<string>('')
@@ -72,7 +72,7 @@ export function ThanalHome() {
         <HeroSection t={t} lang={lang} />
         <AboutSection t={t} />
         <ActivitiesSection t={t} />
-        <StepSection t={t} />
+        <StepSection t={t} lang={lang} />
         <WhySection t={t} />
         <ImpactSection t={t} />
         <HowSection t={t} />
