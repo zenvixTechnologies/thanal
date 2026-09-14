@@ -3,9 +3,10 @@ import type { CopyType } from '@/lib/copy'
 
 interface FooterProps {
   t: CopyType
+  onOpenTerms?: () => void
 }
 
-export function Footer({ t }: FooterProps) {
+export function Footer({ t, onOpenTerms }: FooterProps) {
   return (
     <>
       <footer className="site-footer">
@@ -23,6 +24,15 @@ export function Footer({ t }: FooterProps) {
         </div>
         <div className="footer-bottom">
           <span className="footer-reg-number">© 2026 THANAL – STEP (Reg No: A 542 / 04 Kommady Thumpoly)</span>
+          {onOpenTerms ? (
+            <button type="button" className="footer-terms-btn" onClick={onOpenTerms}>
+              {t.termsTitle}
+            </button>
+          ) : (
+            <a href="/terms" className="footer-terms-link">
+              {t.termsTitle}
+            </a>
+          )}
           <span className="footer-made-with">{t.madeWithCare}</span>
         </div>
       </footer>

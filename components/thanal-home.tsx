@@ -18,12 +18,14 @@ import { ObjectivesSection } from '@/components/objectives-section'
 import { CommunitySection } from '@/components/community-section'
 import { ContactSection } from '@/components/contact-section'
 import { Footer } from '@/components/footer'
+import { TermsModal } from '@/components/terms-modal'
 
 export function ThanalHome() {
   const [lang, setLang] = useState<Lang>('ml')
   const [menuOpen, setMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState<string>('')
+  const [isTermsOpen, setIsTermsOpen] = useState(false)
 
   const t = copy[lang]
 
@@ -84,7 +86,8 @@ export function ThanalHome() {
         <CommunitySection t={t} />
         <ContactSection t={t} />
       </main>
-      <Footer t={t} />
+      <Footer t={t} onOpenTerms={() => setIsTermsOpen(true)} />
+      <TermsModal isOpen={isTermsOpen} onClose={() => setIsTermsOpen(false)} t={t} />
     </div>
   )
 }

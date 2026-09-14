@@ -1,9 +1,17 @@
+export interface GalleryPhoto {
+  id: number
+  title: string
+  image: string
+  description: string
+}
+
 export interface GalleryItem {
   id: number
   title: string
   category: string
   image: string
   description: string
+  photos?: readonly GalleryPhoto[]
 }
 
 export interface OfficeBearer {
@@ -55,6 +63,11 @@ export interface StepDetails {
   visionLines: readonly string[]
   visionTagline: string
   ctaText: string
+}
+
+export interface TermsPointSection {
+  title: string
+  points: readonly string[]
 }
 
 export interface CopyType {
@@ -118,6 +131,13 @@ export interface CopyType {
   sayHello: string
   backToTop: string
   madeWithCare: string
+  termsLabel: string
+  termsTitle: string
+  termsSubtitle: string
+  termsLastUpdated: string
+  termsSections: readonly TermsPointSection[]
+  termsClose: string
+  termsAccept: string
 }
 
 export const copy: Record<'en' | 'ml', CopyType> = {
@@ -261,45 +281,88 @@ export const copy: Record<'en' | 'ml', CopyType> = {
     galleryItems: [
       {
         id: 1,
-        title: 'Super Speciality Medical Camp',
+        title: 'Super Speciality Medical Camp & Health Care',
         category: 'Health Care',
         image: '/images/medical-camp.png',
-        description: 'Super speciality medical camp led by Dr. K. Venugopal (Pulmonologist) and Dr. V. Jayaram (Cardiologist) offering free consultations and medicines.',
+        description: 'Super speciality medical camps led by Dr. K. Venugopal (Pulmonologist) and Dr. V. Jayaram (Cardiologist) offering free consultations, diagnosis, and medicines.',
+        photos: [
+          {
+            id: 101,
+            title: 'Super Speciality Medical Camp Consultation',
+            image: '/images/medical-camp.png',
+            description: 'Super speciality medical camp led by Dr. K. Venugopal (Pulmonologist) and Dr. V. Jayaram (Cardiologist) offering free consultations and medicines.',
+          },
+          {
+            id: 102,
+            title: 'Medical Camp Address & Inauguration Ceremony',
+            image: '/images/medical-camp-1.jpg',
+            description: 'Inaugural address and public gathering during the health care initiative by THANAL Charitable Society.',
+          },
+          {
+            id: 103,
+            title: 'Doctor Consultation & Student Felicitation',
+            image: '/images/medical-camp-2.jpg',
+            description: 'Honoring health care contributors and guest doctors at the THANAL community health initiative.',
+          },
+          {
+            id: 104,
+            title: 'Community Health Awareness & Honor',
+            image: '/images/medical-camp-3.jpg',
+            description: 'Welcoming guests and supporting local families during the health and welfare gathering.',
+          },
+          {
+            id: 105,
+            title: 'Medical Support & Volunteer Recognition',
+            image: '/images/medical-camp-4.jpg',
+            description: 'THANAL office bearers presenting mementos and medical support kits to community beneficiaries.',
+          },
+          {
+            id: 106,
+            title: 'Health Care Service & Token of Gratitude',
+            image: '/images/medical-camp-5.jpg',
+            description: 'Recognizing dedicated health care volunteers and medical supporters for their exemplary service.',
+          },
+        ],
       },
       {
         id: 2,
-        title: 'Annual Educational Scholarship Distribution',
+        title: 'Educational Scholarships & Student Support',
         category: 'Education',
         image: '/images/scholarship-1.jpg',
-        description: 'Empowering promising students from underprivileged families with annual educational scholarships and learning materials.',
+        description: 'Empowering promising students from underprivileged families with annual educational scholarships, financial aid, and learning support.',
+        photos: [
+          {
+            id: 201,
+            title: 'Annual Educational Scholarship Distribution',
+            image: '/images/scholarship-1.jpg',
+            description: 'Empowering promising students from underprivileged families with annual educational scholarships and learning materials.',
+          },
+          {
+            id: 202,
+            title: 'Scholarship Ceremony & Student Encouragement',
+            image: '/images/scholarship-2.jpg',
+            description: 'THANAL Charitable Society distributing annual scholarships and financial aid to deserving students at Kommady.',
+          },
+          {
+            id: 203,
+            title: 'Educational Financial Aid Presentation',
+            image: '/images/scholarship-3.jpg',
+            description: 'Supporting high-achieving students from poor families to pursue higher education without financial barriers.',
+          },
+          {
+            id: 204,
+            title: 'THANAL Public Function & Address',
+            image: '/images/scholarship-4.jpg',
+            description: 'Public meeting and scholarship distribution ceremony organized by THANAL Charitable Society.',
+          },
+        ],
       },
       {
         id: 3,
-        title: 'Scholarship Ceremony & Student Encouragement',
-        category: 'Education',
-        image: '/images/scholarship-2.jpg',
-        description: 'THANAL Charitable Society distributing annual scholarships and financial aid to deserving students at Kommady.',
-      },
-      {
-        id: 4,
-        title: 'Educational Financial Aid Presentation',
-        category: 'Education',
-        image: '/images/scholarship-3.jpg',
-        description: 'Supporting high-achieving students from poor families to pursue higher education without financial barriers.',
-      },
-      {
-        id: 5,
         title: 'Neighborhood Essential Aid Distribution',
         category: 'Community Support',
         image: '/images/community-care.png',
         description: 'Volunteers distributing essential food kits and home care support to elderly citizens across Kommady and Aryad wards.',
-      },
-      {
-        id: 6,
-        title: 'THANAL Public Function & Address',
-        category: 'Solidarity',
-        image: '/images/scholarship-4.jpg',
-        description: 'Public meeting and scholarship distribution ceremony organized by THANAL Charitable Society.',
       },
     ],
     howLabel: 'How STEP works',
@@ -329,6 +392,66 @@ export const copy: Record<'en' | 'ml', CopyType> = {
     sayHello: 'Say hello',
     backToTop: 'Back to top',
     madeWithCare: 'Made with care',
+    termsLabel: 'LEGAL & POLICY',
+    termsTitle: 'Terms & Conditions',
+    termsSubtitle: 'Guidelines and guidelines governing participation in THANAL Charitable Society & STEP Community',
+    termsLastUpdated: 'Last Updated: September 2026',
+    termsSections: [
+      {
+        title: '1. Scope & Acceptance of Terms',
+        points: [
+          'These Terms and Conditions govern your access to the THANAL Charitable Society website and participation in the STEP (Sodality for Terminating Extreme Poverty) community initiative.',
+          'By accessing our website or joining the STEP WhatsApp community group, you acknowledge that you have read, understood, and agreed to these Terms.',
+        ],
+      },
+      {
+        title: '2. Voluntary Micro-Contributions & Non-Refundability',
+        points: [
+          'Participation in STEP is entirely voluntary. There are no registration fees, compulsory dues, or recurring subscription charges.',
+          'Contributions made through STEP are voluntary micro-donations directly aiding verified emergency medical cases, accident victims, or underprivileged families.',
+          'Once a voluntary contribution has been transferred to a beneficiary or designated fund, it is non-refundable.',
+        ],
+      },
+      {
+        title: '3. Case Verification & Due Diligence',
+        points: [
+          'THANAL Charitable Society conducts reliable local enquiries and thorough verification of every case prior to presenting it to the STEP community.',
+          'Assistance is strictly prioritized for genuine cases facing grave medical conditions, sudden accidents, or extreme livelihood distress.',
+        ],
+      },
+      {
+        title: '4. Direct Account Transfer & 100% Transparency',
+        points: [
+          '100% of the collected micro-contributions are transferred directly to the verified beneficiary\'s bank account or medical institution.',
+          'THANAL Charitable Society does not deduct any administrative charges, fees, or commissions from STEP beneficiary contributions.',
+          'Summary details of financial aid distribution are shared with the community group for transparency.',
+        ],
+      },
+      {
+        title: '5. Community Code of Conduct',
+        points: [
+          'Members of the STEP WhatsApp community must maintain mutual respect, ethical behavior, and decorum at all times.',
+          'Unauthorized commercial advertisements, spam, political promotions, or personal disputes are strictly prohibited.',
+          'Members must respect the privacy and human dignity of beneficiaries; improper use of shared medical details or media is strictly forbidden.',
+        ],
+      },
+      {
+        title: '6. Privacy & Personal Data Protection',
+        points: [
+          'Beneficiary details, medical reports, and photographs are shared only with explicit consent for verification and charitable aid purposes.',
+          'THANAL does not sell, rent, or share member contact details with any commercial third parties.',
+        ],
+      },
+      {
+        title: '7. Governing Law & Jurisdiction',
+        points: [
+          'THANAL Charitable Society is registered under the Travancore Cochin Literary, Scientific and Charitable Societies Registration Act 1955 (Reg No: A 542/04).',
+          'These Terms shall be governed by and construed in accordance with the laws of India, subject to the jurisdiction of courts in Alappuzha, Kerala.',
+        ],
+      },
+    ],
+    termsClose: 'Close Terms',
+    termsAccept: 'I Understand & Agree',
   },
   ml: {
     nav: ['ഞങ്ങളെക്കുറിച്ച്', 'പ്രവർത്തനങ്ങൾ', 'STEP', 'പ്രഭാവം', 'ഗാലറി', 'ബന്ധപ്പെടുക'],
@@ -452,45 +575,88 @@ export const copy: Record<'en' | 'ml', CopyType> = {
     galleryItems: [
       {
         id: 1,
-        title: 'സൂപ്പർ സ്പെഷ്യാലിറ്റി മെഡിക്കൽ ക്യാമ്പ്',
+        title: 'സൂപ്പർ സ്പെഷ്യാലിറ്റി മെഡിക്കൽ ക്യാമ്പും ആരോഗ്യ പരിചരണവും',
         category: 'ആരോഗ്യപരിചരണം',
         image: '/images/medical-camp.png',
-        description: 'ഡോ. കെ. വേണുഗോപാൽ (പൾമണോളജിസ്റ്റ്), ഡോ. വി. ജയറാം (കാർഡിയോളജിസ്റ്റ്) തുടങ്ങിയ പ്രമുഖ ഡോക്ടർമാരുടെ മെഡിക്കൽ പരിശോധനയും സൗജന്യ മരുന്ന് വിതരണവും.',
+        description: 'പ്രമുഖ ഡോക്ടർമാരുടെ നേതൃത്വത്തിൽ സൗജന്യ മെഡിക്കൽ ക്യാമ്പുകൾ, പരിശോധനകൾ, സൗജന്യ മരുന്ന് വിതരണം, ആരോഗ്യ ബോധവൽക്കരണം എന്നിവ നൽകുന്നു.',
+        photos: [
+          {
+            id: 101,
+            title: 'സൂപ്പർ സ്പെഷ്യാലിറ്റി മെഡിക്കൽ ക്യാമ്പ്',
+            image: '/images/medical-camp.png',
+            description: 'ഡോ. കെ. വേണുഗോപാൽ (പൾമണോളജിസ്റ്റ്), ഡോ. വി. ജയറാം (കാർഡിയോളജിസ്റ്റ്) തുടങ്ങിയ പ്രമുഖ ഡോക്ടർമാരുടെ മെഡിക്കൽ പരിശോധനയും സൗജന്യ മരുന്ന് വിതരണവും.',
+          },
+          {
+            id: 102,
+            title: 'മെഡിക്കൽ ക്യാമ്പ് ഉദ്ഘാടനവും പൊതുസമ്മേളനവും',
+            image: '/images/medical-camp-1.jpg',
+            description: 'തണൽ ചാരിറ്റബിൾ സൊസൈറ്റിയുടെ നേതൃത്വത്തിൽ നടന്ന ആരോഗ്യ സേവന പരിപാടിയുടെ ഉദ്ഘാടന ചടങ്ങ്.',
+          },
+          {
+            id: 103,
+            title: 'ഡോക്ടർമാരുടെ സേവനവും ആദരിക്കലും',
+            image: '/images/medical-camp-2.jpg',
+            description: 'ആരോഗ്യ രംഗത്തെ വിദഗ്ദ്ധരെയും അതിഥികളെയും തണൽ സൊസൈറ്റിയുടെ നേതൃത്വത്തിൽ ആദരിക്കുന്നു.',
+          },
+          {
+            id: 104,
+            title: 'ആരോഗ്യ ബോധവൽക്കരണവും പൊതുചടങ്ങും',
+            image: '/images/medical-camp-3.jpg',
+            description: 'സാമൂഹിക ആരോഗ്യ പ്രസ്ഥാനത്തിന്റെ ഭാഗമായി സംഘടിപ്പിച്ച പൊതുസമ്മേളനത്തിൽ അതിഥികളെ സ്വീകരിക്കുന്നു.',
+          },
+          {
+            id: 105,
+            title: 'സൗജന്യ മരുന്നും സഹായ വിതരണവും',
+            image: '/images/medical-camp-4.jpg',
+            description: 'തണൽ ഭാരവാഹികൾ നിർധനരായ രോഗികൾക്ക് സൗജന്യ മരുന്നുകളും സാമ്പത്തിക സഹായങ്ങളും കൈമാറുന്നു.',
+          },
+          {
+            id: 106,
+            title: 'സന്നദ്ധ പ്രവർത്തകരെ ആദരിക്കൽ',
+            image: '/images/medical-camp-5.jpg',
+            description: 'ആരോഗ്യ പരിചരണ പ്രവർത്തനങ്ങൾക്ക് നേതൃത്വം നൽകിയ സന്നദ്ധ പ്രവർത്തകർക്ക് ഉപഹാരം നൽകുന്നു.',
+          },
+        ],
       },
       {
         id: 2,
-        title: 'വാർഷിക വിദ്യാഭ്യാസ സ്കോളർഷിപ്പ് വിതരണം',
+        title: 'വിദ്യാഭ്യാസ സഹായവും സ്കോളർഷിപ്പ് വിതരണവും',
         category: 'വിദ്യാഭ്യാസം',
         image: '/images/scholarship-1.jpg',
-        description: 'സാമ്പത്തികമായി പിന്നാക്കം നിൽക്കുന്ന കുടുംബങ്ങളിലെ മിടുക്കരായ വിദ്യാർത്ഥികൾക്ക് വാർഷിക വിദ്യാഭ്യാസ സ്കോളർഷിപ്പുകളും പുസ്തകങ്ങളും വിതരണം ചെയ്യുന്നു.',
+        description: 'സാമ്പത്തികമായി പിന്നാക്കം നിൽക്കുന്ന കുടുംബങ്ങളിലെ മിടുക്കരായ വിദ്യാർത്ഥികൾക്ക് വാർഷിക വിദ്യാഭ്യാസ സ്കോളർഷിപ്പുകളും സാമ്പത്തിക പിന്തുണയും നൽകുന്നു.',
+        photos: [
+          {
+            id: 201,
+            title: 'വാർഷിക വിദ്യാഭ്യാസ സ്കോളർഷിപ്പ് വിതരണം',
+            image: '/images/scholarship-1.jpg',
+            description: 'സാമ്പത്തികമായി പിന്നാക്കം നിൽക്കുന്ന കുടുംബങ്ങളിലെ മിടുക്കരായ വിദ്യാർത്ഥികൾക്ക് വാർഷിക വിദ്യാഭ്യാസ സ്കോളർഷിപ്പുകളും പുസ്തകങ്ങളും വിതരണം ചെയ്യുന്നു.',
+          },
+          {
+            id: 202,
+            title: 'സ്കോളർഷിപ്പ് വിതരണവും കുടുംബ സംഗമവും',
+            image: '/images/scholarship-2.jpg',
+            description: 'തണൽ ചാരിറ്റബിൾ സൊസൈറ്റിയുടെ നേതൃത്വത്തിൽ കൊമ്മാടിയിൽ നടന്ന വാർഷിക സ്കോളർഷിപ്പ് വിതരണവും കുടുംബ സംഗമവും.',
+          },
+          {
+            id: 203,
+            title: 'വിദ്യാർത്ഥി പ്രോത്സാഹന സാമ്പത്തിക സഹായം',
+            image: '/images/scholarship-3.jpg',
+            description: 'ഉപരിപഠനം ഉറപ്പാക്കുന്നതിനായി നിർധന കുടുംബങ്ങളിലെ വിദ്യാർത്ഥികൾക്ക് നേരിട്ട് സാമ്പത്തിക സഹായം കൈമാറുന്നു.',
+          },
+          {
+            id: 204,
+            title: 'തണൽ സൊസൈറ്റി പൊതുസമ്മേളനം',
+            image: '/images/scholarship-4.jpg',
+            description: 'കൊമ്മാടിയിൽ നടന്ന തണൽ ചാരിറ്റബിൾ സൊസൈറ്റി പൊതുസമ്മേളനവും സഹായ വിതരണവും.',
+          },
+        ],
       },
       {
         id: 3,
-        title: 'സ്കോളർഷിപ്പ് വിതരണവും കുടുംബ സംഗമവും',
-        category: 'വിദ്യാഭ്യാസം',
-        image: '/images/scholarship-2.jpg',
-        description: 'തണൽ ചാരിറ്റബിൾ സൊസൈറ്റിയുടെ നേതൃത്വത്തിൽ കൊമ്മാടിയിൽ നടന്ന വാർഷിക സ്കോളർഷിപ്പ് വിതരണവും കുടുംബ സംഗമവും.',
-      },
-      {
-        id: 4,
-        title: 'വിദ്യാർത്ഥി പ്രോത്സാഹന സാമ്പത്തിക സഹായം',
-        category: 'വിദ്യാഭ്യാസം',
-        image: '/images/scholarship-3.jpg',
-        description: 'ഉപരിപഠനം ഉറപ്പാക്കുന്നതിനായി നിർധന കുടുംബങ്ങളിലെ വിദ്യാർത്ഥികൾക്ക് നേരിട്ട് സാമ്പത്തിക സഹായം കൈമാറുന്നു.',
-      },
-      {
-        id: 5,
         title: 'അയൽക്കൂട്ട അവശ്യവസ്തു വിതരണം',
         category: 'കൂട്ടായ കരുതൽ',
         image: '/images/community-care.png',
         description: 'കൊമ്മാടി, ആര്യാട് വാർഡുകളിലെ നിർധന കുടുംബങ്ങൾക്കും മുതിർന്ന പൗരന്മാർക്കും ഭക്ഷണകിറ്റുകളും അവശ്യവസ്തുക്കളും എത്തിച്ചു നൽകുന്നു.',
-      },
-      {
-        id: 6,
-        title: 'തണൽ സൊസൈറ്റി പൊതുസമ്മേളനം',
-        category: 'ഐക്യദാർഢ്യം',
-        image: '/images/scholarship-4.jpg',
-        description: 'കൊമ്മാടിയിൽ നടന്ന തണൽ ചാരിറ്റബിൾ സൊസൈറ്റി പൊതുസമ്മേളനവും സഹായ വിതരണവും.',
       },
     ],
     howLabel: 'STEP എങ്ങനെ പ്രവർത്തിക്കുന്നു', howTitle: 'പങ്കിട്ട ആശങ്കയിൽ നിന്ന്\nപങ്കിട്ട പരിഹാരത്തിലേക്ക്.', steps: [['കേൾക്കുക', 'ഇതിനകം നിലനിൽക്കുന്ന ആവശ്യങ്ങളും ശക്തികളും മനസ്സിലാക്കുക.'], ['ഒരുമിക്കുക', 'ആളുകളെയും പങ്കാളികളെയും വിഭവങ്ങളെയും ഒരുമിപ്പിക്കുക.'], ['പ്രവർത്തിക്കുക', 'മുന്നേറ്റം സൃഷ്ടിക്കുന്ന പ്രായോഗിക ചുവടുകൾ എടുക്കുക.'], ['വളരുക', 'പഠിക്കുകയും പങ്കിടുകയും വലയം മുന്നോട്ട് കൊണ്ടുപോകുകയും ചെയ്യുക.']], trustLabel: 'എപ്പോഴും വിശ്വാസം', trustTitle: 'നല്ല പ്രവർത്തനങ്ങൾക്ക്\nതുറന്ന ജനാലകൾ വേണം.', trustCards: [['സ്ഥിരീകരിച്ച കഥകൾ', 'യഥാർത്ഥ ആളുകൾ. യഥാർത്ഥ യാത്രകൾ. സമ്മതത്തോടെ പങ്കിടുന്നു.'], ['സുതാര്യ പ്രവർത്തനം', 'ഞങ്ങളുടെ പ്രവർത്തനം ദൃശ്യവും അളക്കാവുന്നതും ഉത്തരവാദിത്തമുള്ളതുമാണ്.'], ['പ്രാദേശിക നേതൃത്വം', 'പ്രശ്നത്തിന് അടുത്തുള്ളവരാണ് പരിഹാരം രൂപപ്പെടുത്തുന്നത്.'], ['ദീർഘകാല കരുതൽ', 'ആദ്യ നാഴികക്കല്ലിന് ശേഷവും ഞങ്ങൾ കൂടെയുണ്ട്.']], storiesLabel: 'വലയത്തിൽ നിന്നുള്ള കഥകൾ', storiesTitle: 'മനുഷ്യരുടെ കഥകൾ,\nസ്ഥിതിവിവരക്കണക്കുകളല്ല.', storySoon: 'സ്ഥിരീകരിച്ച കഥ ഉടൻ', joinTitle: 'ഈ വലയത്തിൽ നിങ്ങൾക്കും ഇടമുണ്ട്.', joinBody: 'സമയം, കഴിവ്, കേൾക്കുന്ന മനസ്സ്, അല്ലെങ്കിൽ തുടങ്ങാനുള്ള സന്നദ്ധത—എന്തും കൊണ്ടുവരാം.', whatsapp: 'WhatsApp കൂട്ടായ്മയിൽ ചേരുക', objectivesTitle: 'ഞങ്ങൾ ലക്ഷ്യമിടുന്നത്', objectives: ['അന്തസ്സുള്ള ജീവിതങ്ങൾ', 'ആരോഗ്യമുള്ള സമൂഹങ്ങൾ', 'പരിധികളില്ലാത്ത പഠനം', 'ഐക്യത്തിന്റെ സംസ്കാരം'], contactTitle: 'അടുത്ത ചുവട് എടുക്കാം.', contactBody: 'ഒരു ചോദ്യം, പങ്കാളിത്ത ആശയം, അല്ലെങ്കിൽ പങ്കിടാനുള്ള കഥയുണ്ടോ? ഞങ്ങൾ കേൾക്കാൻ ആഗ്രഹിക്കുന്നു.', email: 'contact@thanal.org', phone: '+91 94955 75716', address: 'തണൽ ചാരിറ്റബിൾ സൊസൈറ്റി, കൊമ്മാടി, ആലപ്പുഴ, കേരളം 688008', footer: 'കൂടുതൽ അന്തസ്സുള്ള ലോകത്തിനായുള്ള ജനകീയ പ്രസ്ഥാനം.',
@@ -503,6 +669,65 @@ export const copy: Record<'en' | 'ml', CopyType> = {
     sayHello: 'സംസാരിക്കാം',
     backToTop: 'മുകളിലേക്ക് മടങ്ങുക',
     madeWithCare: 'കരുതലോടെ നിർമ്മിച്ചത്',
+    termsLabel: 'നിയമവും നയങ്ങളും',
+    termsTitle: 'നിബന്ധനകളും വ്യവസ്ഥകളും',
+    termsSubtitle: 'തണൽ ചാരിറ്റബിൾ സൊസൈറ്റി & STEP കൂട്ടായ്മയിൽ പങ്കാളികളാകുന്നതിനുള്ള മാർഗ്ഗനിർദ്ദേശങ്ങൾ',
+    termsLastUpdated: 'അവസാനം അപ്‌ഡേറ്റ് ചെയ്തത്: സെപ്റ്റംബർ 2026',
+    termsSections: [
+      {
+        title: '1. പൊതുവ്യവസ്ഥകളും സമ്മതവും',
+        points: [
+          'തണൽ ചാരിറ്റബിൾ സൊസൈറ്റിയുടെ (Reg No: A 542/04, Kommady) വെബ്‌സൈറ്റ് ഉപയോഗിക്കുന്നതിനും STEP (Sodality for Terminating Extreme Poverty) കൂട്ടായ്മയിൽ പങ്കാളികളാകുന്നതിനും ഈ നിബന്ധനകളും വ്യവസ്ഥകളും ബാധകമാണ്.',
+          'വെബ്‌സൈറ്റ് സന്ദർശിക്കുന്നതിലൂടെയോ STEP WhatsApp ഗ്രൂപ്പിൽ അംഗമാകുന്നതിലൂടെയോ നിങ്ങൾ ഈ വ്യവസ്ഥകൾ വായിച്ച് മനസ്സിലാക്കി അംഗീകരിച്ചതായി കണക്കാക്കുന്നു.',
+        ],
+      },
+      {
+        title: '2. സന്നദ്ധ സംഭാവനകളും റീഫണ്ടും',
+        points: [
+          'STEP പദ്ധതിയിലെ പങ്കാളിത്തവും സംഭാവനകളും തികച്ചും സന്നദ്ധമാണ്. ഇതിൽ അംഗത്വ ഫീസോ നിർബന്ധിത വരിസംഖ്യയോ ഇല്ല.',
+          'സമാഹരിക്കുന്ന സംഭാവനകൾ നിർധനരും അടിയന്തര സാമ്പത്തിക/ചികിത്സാ സഹായം ആവശ്യമുള്ളവരുമായ ഗുണഭോക്താക്കൾക്കാണ് നൽകുന്നത്.',
+          'ഗുണഭോക്താവിന്റെ അക്കൗണ്ടിലേക്ക് അല്ലെങ്കിൽ സഹായ ഫണ്ടിലേക്ക് സമാഹരിച്ച് കൈമാറിയ തുക യാതൊരു കാരണവശാലും തിരികെ (Refund) നൽകുന്നതല്ല.',
+        ],
+      },
+      {
+        title: '3. കേസുകളുടെ സത്യസന്ധതയും പരിശോധനയും',
+        points: [
+          'STEP കൂട്ടായ്മയിൽ അവതരിപ്പിക്കുന്ന ഓരോ കേസും തണൽ ഭാരവാഹികളുടെ നേരിട്ടുള്ള അന്വേഷണത്തിലൂടെയും പരിശോധനയിലൂടെയും യഥാർത്ഥമാണെന്ന് ഉറപ്പുവരുത്തുന്നു.',
+          'ഗുരുതര രോഗങ്ങൾ ബാധിച്ചവർ, പ്രതീക്ഷിക്കാത്ത അപകടത്തിൽപ്പെട്ടവർ, ഉപജീവനം പ്രതിസന്ധിയിലായവർ എന്നിവരുടെ കേസുകൾക്കാണ് മുൻഗണന നൽകുന്നത്.',
+        ],
+      },
+      {
+        title: '4. നേരിട്ടുള്ള അക്കൗണ്ട് കൈമാറ്റവും സുതാര്യതയും',
+        points: [
+          'സമാഹരിക്കുന്ന മുഴുവൻ തുകയും യാതൊരുവിധ അഡ്മിനിസ്ട്രേറ്റീവ് കമ്മീഷനും ഇല്ലാതെ നേരിട്ട് ഗുണഭോക്താവിന്റെ ബാങ്ക് അക്കൗണ്ടിലേക്കാണ് കൈമാറുന്നത്.',
+          'ധനസഹായ വിതരണത്തിന്റെ വിവരങ്ങൾ സുതാര്യത ഉറപ്പാക്കാനായി കൂട്ടായ്മയിൽ പങ്കുവെക്കുന്നു.',
+        ],
+      },
+      {
+        title: '5. കൂട്ടായ്മയുടെ പെരുമാറ്റച്ചട്ടം',
+        points: [
+          'STEP WhatsApp ഗ്രൂപ്പിലെ അംഗങ്ങൾ പരസ്പര ബഹുമാനവും അച്ചടക്കവും കാത്തുസൂക്ഷിക്കേണ്ടതാണ്.',
+          'അനുമതിയില്ലാത്ത വാണിജ്യ പരസ്യങ്ങൾ, സ്പാം സന്ദേശങ്ങൾ, രാഷ്ട്രീയ പ്രചാരണങ്ങൾ എന്നിവ ഗ്രൂപ്പിൽ പാടില്ല.',
+          'ഗുണഭോക്താക്കളുടെയും രോഗികളുടെയും വ്യക്തിപരമായ അന്തസ്സ് കാത്തുസൂക്ഷിക്കേണ്ടതും അവരുടെ ചിത്രങ്ങളോ വിവരങ്ങളോ ദുരുപയോഗം ചെയ്യാൻ പാടില്ലാത്തതുമാണ്.',
+        ],
+      },
+      {
+        title: '6. സ്വകാര്യതയും വിവര സംരക്ഷണവും',
+        points: [
+          'ഗുണഭോക്താക്കളുടെ വിവരങ്ങളും ചിത്രങ്ങളും അവരുടെ പൂർണ്ണ സമ്മതത്തോടെ മാത്രമാണ് ഗ്രൂപ്പിൽ പങ്കുവെക്കുന്നത്.',
+          'അംഗങ്ങളുടെ ഫോൺ നമ്പറോ വിവരങ്ങളോ മൂന്നാം കക്ഷികൾക്ക് കൈമാറുകയോ വിൽക്കുകയോ ചെയ്യില്ല.',
+        ],
+      },
+      {
+        title: '7. നിയമപരമായ പരിധി (Governing Law)',
+        points: [
+          'തണൽ ചാരിറ്റബിൾ സൊസൈറ്റി 1955-ലെ തിരുവിതാംകൂർ കൊച്ചി സാഹിത്യ ശാസ്ത്രീയ ധർമ്മസംഘങ്ങളുടെ രജിസ്ട്രേഷൻ ആക്ട് പ്രകാരം രജിസ്റ്റർ ചെയ്ത സ്ഥാപനമാണ്.',
+          'ഈ വ്യവസ്ഥകൾ ഇന്ത്യൻ നിയമങ്ങൾക്കും ആലപ്പുഴയിലെ കോടതി Jurisdiction-നും വിധേയമായിരിക്കും.',
+        ],
+      },
+    ],
+    termsClose: 'അടയ്ക്കുക',
+    termsAccept: 'മനസ്സിലായി & അംഗീകരിക്കുന്നു',
   },
 }
 
