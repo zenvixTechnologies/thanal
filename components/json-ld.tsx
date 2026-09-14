@@ -3,15 +3,27 @@ export function JsonLd() {
     '@context': 'https://schema.org',
     '@type': 'NGO',
     '@id': 'https://thanalcharitabletrust.org/#organization',
-    name: 'THANAL Charitable Society',
-    alternateName: 'തണൽ ചാരിറ്റബിൾ സൊസൈറ്റി',
+    name: 'THANAL Charitable Society & Trust',
+    alternateName: [
+      'THANAL Charitable Trust',
+      'THANAL Charitable Society',
+      'THANAL Alappuzha',
+      'Thanal Kommady',
+      'തണൽ ചാരിറ്റബിൾ സൊസൈറ്റി',
+      'തണൽ ചാരിറ്റബിൾ ട്രസ്റ്റ്',
+    ],
     description:
-      'THANAL is a charitable organisation established in 2004 in Kommady, Alappuzha, focused on healthcare, super speciality medical camps, educational scholarships, and STEP micro-contribution community support.',
+      'THANAL is a registered charitable organisation established in 2004 in Kommady, Alappuzha, focused on healthcare, super speciality medical camps, educational scholarships, and STEP micro-contributions.',
     url: 'https://thanalcharitabletrust.org/',
     logo: 'https://thanalcharitabletrust.org/images/thanal-logo.png',
     image: 'https://thanalcharitabletrust.org/images/thanal-community.png',
     identifier: 'Reg No: A 542/04 Kommady Thumpoly',
     foundingDate: '2004',
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 9.5226,
+      longitude: 76.3262,
+    },
     address: {
       '@type': 'PostalAddress',
       streetAddress: 'Kommady, Thumpoly P.O.',
@@ -27,6 +39,7 @@ export function JsonLd() {
       email: 'contact@thanal.org',
       availableLanguage: ['Malayalam', 'English'],
     },
+    sameAs: ['https://chat.whatsapp.com/DqaKMhfLWYv51PaoGsmLkT?s=sw&p=a&mlu=4&ilr=4'],
     areaServed: [
       { '@type': 'AdministrativeArea', name: 'Alappuzha' },
       { '@type': 'AdministrativeArea', name: 'Aryad' },
@@ -40,12 +53,31 @@ export function JsonLd() {
     '@type': 'WebSite',
     '@id': 'https://thanalcharitabletrust.org/#website',
     url: 'https://thanalcharitabletrust.org/',
-    name: 'THANAL – Sodality for Terminating Extreme Poverty (STEP)',
-    alternateName: 'തണൽ ചാരിറ്റബിൾ സൊസൈറ്റി & STEP',
+    name: 'THANAL Charitable Trust & Society | STEP Alappuzha',
+    alternateName: ['THANAL Charitable Trust', 'തണൽ ചാരിറ്റബിൾ സൊസൈറ്റി & STEP'],
     publisher: {
       '@id': 'https://thanalcharitabletrust.org/#organization',
     },
     inLanguage: ['ml-IN', 'en-US'],
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://thanalcharitabletrust.org/',
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Terms & Conditions',
+        item: 'https://thanalcharitabletrust.org/terms',
+      },
+    ],
   }
 
   const faqSchema = {
@@ -88,6 +120,10 @@ export function JsonLd() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <script
         type="application/ld+json"

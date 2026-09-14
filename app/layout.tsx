@@ -9,11 +9,11 @@ const malayalam = Noto_Sans_Malayalam({ subsets: ['malayalam'], variable: '--fon
 export const metadata: Metadata = {
   metadataBase: new URL('https://thanalcharitabletrust.org'),
   title: {
-    default: 'THANAL – Sodality for Terminating Extreme Poverty (STEP)',
-    template: '%s | THANAL Charitable Society',
+    default: 'THANAL Charitable Trust & Society | STEP Alappuzha',
+    template: '%s | THANAL Charitable Trust',
   },
   description:
-    'THANAL is a registered charitable society (Reg No: A 542/04 Kommady, Alappuzha) driving community healthcare, super speciality medical camps, educational scholarships, and STEP micro-contributions.',
+    'Official website of THANAL Charitable Trust & Society (Reg No: A 542/04 Kommady, Alappuzha). Empowering communities through STEP micro-contributions, super speciality medical camps, and educational scholarships.',
   keywords: [
     'THANAL',
     'THANAL Charitable Society',
@@ -60,12 +60,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/images/thanal-logo.png', type: 'image/png' },
+      { url: '/images/thanal-logo-white-bg.png', type: 'image/png' },
       { url: '/icon.png', type: 'image/png' },
     ],
-    shortcut: '/images/thanal-logo.png',
+    shortcut: '/images/thanal-logo-white-bg.png',
     apple: [
-      { url: '/images/thanal-logo.png', sizes: '180x180', type: 'image/png' },
+      { url: '/images/thanal-logo-white-bg.png', sizes: '180x180', type: 'image/png' },
       { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
     ],
   },
