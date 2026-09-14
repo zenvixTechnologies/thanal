@@ -13,7 +13,12 @@ export function CommunitySection({ t }: CommunitySectionProps) {
         <h2>{t.whatsapp}</h2>
         <p>{t.communityIntro}</p>
       </div>
-      <a className="button button-light" href="#contact">
+      <a
+        className="button button-light"
+        href="https://chat.whatsapp.com/DqaKMhfLWYv51PaoGsmLkT?s=sw&p=a&mlu=4&ilr=4"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         {t.openWhatsapp}
         <ArrowUpRight />
       </a>
