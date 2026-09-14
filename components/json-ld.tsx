@@ -32,13 +32,22 @@ export function JsonLd() {
       postalCode: '688008',
       addressCountry: 'IN',
     },
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+91 94955 75716',
-      contactType: 'customer support',
-      email: 'contact@thanal.org',
-      availableLanguage: ['Malayalam', 'English'],
-    },
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: '+91 94955 75716',
+        contactType: 'customer support',
+        email: 'contact@thanal.org',
+        availableLanguage: ['Malayalam', 'English'],
+      },
+      {
+        '@type': 'ContactPoint',
+        telephone: '+91 8714286609',
+        contactType: 'customer support',
+        email: 'contact@thanal.org',
+        availableLanguage: ['Malayalam', 'English'],
+      },
+    ],
     sameAs: ['https://chat.whatsapp.com/DqaKMhfLWYv51PaoGsmLkT?s=sw&p=a&mlu=4&ilr=4'],
     areaServed: [
       { '@type': 'AdministrativeArea', name: 'Alappuzha' },

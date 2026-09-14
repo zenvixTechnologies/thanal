@@ -41,6 +41,14 @@ export function ContactSection({ t }: ContactSectionProps) {
             <ArrowUpRight className="contact-arrow" />
           </a>
 
+          <a href={`tel:${t.phone2.replace(/\s+/g, '')}`} className="contact-row">
+            <div className="contact-row-left">
+              <Phone className="contact-icon" />
+              <span>{t.phone2}</span>
+            </div>
+            <ArrowUpRight className="contact-arrow" />
+          </a>
+
           <a
             href={mapsDirectUrl}
             target="_blank"
