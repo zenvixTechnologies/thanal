@@ -39,9 +39,15 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: '/icon.png',
-    shortcut: '/favicon.ico',
-    apple: '/apple-icon.png',
+    icon: [
+      { url: '/images/thanal-logo.png', type: 'image/png' },
+      { url: '/icon.png', type: 'image/png' },
+    ],
+    shortcut: '/images/thanal-logo.png',
+    apple: [
+      { url: '/images/thanal-logo.png', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
+    ],
   },
   openGraph: {
     title: 'THANAL – Sodality for Terminating Extreme Poverty (STEP)',
