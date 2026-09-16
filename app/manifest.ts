@@ -2,8 +2,8 @@ import type { MetadataRoute } from 'next'
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'THANAL – Sodality for Terminating Extreme Poverty (STEP)',
-    short_name: 'THANAL STEP',
+    name: 'THANAL Charitable Society, Alappuzha | Healthcare, Education & STEP',
+    short_name: 'THANAL Alappuzha',
     description:
       'THANAL is a registered charitable society in Kommady, Alappuzha, driving community healthcare, super speciality medical camps, educational scholarships, and STEP micro-contributions.',
     start_url: '/',

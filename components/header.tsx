@@ -6,20 +6,20 @@ import type { CopyType, Lang } from '@/lib/copy'
 interface HeaderProps {
   t: CopyType
   lang: Lang
-  scrolled: boolean
-  activeSection: string
-  menuOpen: boolean
-  setMenuOpen: (open: boolean) => void
+  scrolled?: boolean
+  activeSection?: string
+  menuOpen?: boolean
+  setMenuOpen?: (open: boolean) => void
   toggleLang: () => void
 }
 
 export function Header({
   t,
   lang,
-  scrolled,
-  activeSection,
-  menuOpen,
-  setMenuOpen,
+  scrolled = false,
+  activeSection = '',
+  menuOpen = false,
+  setMenuOpen = () => {},
   toggleLang,
 }: HeaderProps) {
   const navTargets = ['about', 'activities', 'step', 'impact', 'gallery', 'contact']

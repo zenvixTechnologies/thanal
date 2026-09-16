@@ -9,20 +9,27 @@ const malayalam = Noto_Sans_Malayalam({ subsets: ['malayalam'], variable: '--fon
 export const metadata: Metadata = {
   metadataBase: new URL('https://thanalcharitabletrust.org'),
   title: {
-    default: 'THANAL Charitable Trust & Society | STEP Alappuzha',
-    template: '%s | THANAL Charitable Trust',
+    default: 'THANAL Charitable Society, Alappuzha | Healthcare, Education & STEP',
+    template: '%s | THANAL Charitable Society, Alappuzha',
   },
   description:
-    'Official website of THANAL Charitable Trust & Society (Reg No: A 542/04 Kommady, Alappuzha). Empowering communities through STEP micro-contributions, super speciality medical camps, and educational scholarships.',
+    'Official website of THANAL Charitable Society (Reg No: A 542/04 Kommady, Alappuzha). Empowering communities through STEP micro-contributions, super speciality medical camps, and educational scholarships.',
   keywords: [
     'THANAL',
     'THANAL Charitable Society',
+    'THANAL Charitable Society Alappuzha',
+    'THANAL Alappuzha',
+    'THANAL Kommady',
+    'THANAL Kerala',
+    'THANAL STEP',
+    'THANAL charitable organisation',
+    'THANAL medical camps',
+    'THANAL educational scholarships',
     'THANAL Charitable Trust',
-    'Thanal Alappuzha',
-    'Thanal Kommady',
     'തണൽ ചാരിറ്റബിൾ സൊസൈറ്റി',
     'തണൽ അലപ്പുഴ',
     'തണൽ കൊമ്മാടി',
+    'തണൽ കേരള',
     'STEP',
     'Sodality for Terminating Extreme Poverty',
     'STEP Thanal',
@@ -70,11 +77,11 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: 'THANAL – Sodality for Terminating Extreme Poverty (STEP)',
+    title: 'THANAL Charitable Society, Alappuzha | Healthcare, Education & STEP',
     description:
       'Micro Contribution – Macro Social Benefit. Community-led healthcare, educational scholarships, and emergency financial support in Kommady, Alappuzha.',
     url: 'https://thanalcharitabletrust.org/',
-    siteName: 'THANAL Charitable Society',
+    siteName: 'THANAL Charitable Society, Alappuzha',
     images: [
       {
         url: '/images/thanal-community.png',
@@ -88,7 +95,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'THANAL – Sodality for Terminating Extreme Poverty (STEP)',
+    title: 'THANAL Charitable Society, Alappuzha | Healthcare, Education & STEP',
     description:
       'Micro Contribution – Macro Social Benefit. Community care and educational support in Alappuzha.',
     images: ['/images/thanal-community.png'],

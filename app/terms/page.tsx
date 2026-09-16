@@ -12,7 +12,7 @@ export default function TermsPage() {
 
   return (
     <div className={`page-wrapper ${lang === 'ml' ? 'font-malayalam' : ''}`}>
-      <Header t={t} lang={lang} onToggleLang={() => setLang((l) => (l === 'en' ? 'ml' : 'en'))} />
+      <Header t={t} lang={lang} toggleLang={() => setLang((l) => (l === 'en' ? 'ml' : 'en'))} />
 
       <main className="terms-page-container">
         <div className="terms-page-hero">

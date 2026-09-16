@@ -23,7 +23,7 @@ export function Footer({ t, onOpenTerms }: FooterProps) {
           </a>
         </div>
         <div className="footer-bottom">
-          <span className="footer-reg-number">© 2026 THANAL – STEP (Reg No: A 542 / 04 Kommady Thumpoly)</span>
+          <span className="footer-reg-number">© 2026 THANAL Charitable Society, Alappuzha (Reg No: A 542 / 04 Kommady Thumpoly)</span>
           {onOpenTerms ? (
             <button type="button" className="footer-terms-btn" onClick={onOpenTerms}>
               {t.termsTitle}
