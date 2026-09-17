@@ -116,8 +116,8 @@ export const viewport: Viewport = { colorScheme: 'light', themeColor: '#0b3d30',
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="bg-background">
-      <body className={`${dmSans.variable} ${malayalam.variable} antialiased`}>
+    <html lang="en" className="bg-background" suppressHydrationWarning>
+      <body className={`${dmSans.variable} ${malayalam.variable} antialiased`} suppressHydrationWarning>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
