@@ -12,7 +12,12 @@ export default function manifest(): MetadataRoute.Manifest {
     theme_color: '#0b3d30',
     icons: [
       {
-        src: '/images/thanal-logo-white-bg.png',
+        src: '/favicon-48x48.png',
+        sizes: '48x48',
+        type: 'image/png',
+      },
+      {
+        src: '/favicon-192x192.png',
         sizes: '192x192',
         type: 'image/png',
       },

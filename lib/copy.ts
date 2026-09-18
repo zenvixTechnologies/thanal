@@ -161,11 +161,11 @@ export const copy: Record<'en' | 'ml', CopyType> = {
       { role: 'Treasurer', name: 'M. D. Ramesan' },
     ],
     history: 'A growing circle of care',
-    historyBody: 'THANAL Alappuzha focuses on health care and education in Kerala: super speciality THANAL medical camps led by eminent doctors like Dr. K. Venugopal (Pulmonologist) and Dr. V. Jayaram (Cardiologist), financial assistance for patients suffering from grave diseases like cancer, and annual THANAL educational scholarships for students from poor families in Kommady.',
+    historyBody: 'With a special focus on health care and education, we organize super speciality medical camps featuring eminent doctors such as Dr. K. Venugopal (Pulmonologist) and Dr. V. Jayaram (Cardiologist). In addition, we provide financial assistance to underprivileged patients suffering from serious illnesses and annual educational scholarships for students from poor families.',
     activitiesLabel: 'Where we show up',
     activitiesTitle: 'Care that meets people\nwhere they are.',
     activities: [
-      ['01', 'Health care', 'Super speciality THANAL medical camps led by eminent doctors like Dr. K. Venugopal (Pulmonologist) & Dr. V. Jayaram (Cardiologist), and financial aid for cancer & grave illnesses.'],
+      ['01', 'Health care', 'Super speciality THANAL medical camps featuring eminent doctors such as Dr. K. Venugopal (Pulmonologist) & Dr. V. Jayaram (Cardiologist), and financial aid for cancer & grave illnesses.'],
       ['02', 'Education', 'Annual THANAL educational scholarships and learning support for students from poor families in Alappuzha, Kerala.'],
       ['03', 'Community care', 'Neighbors organizing around food security, shelter, and safer homes under THANAL Kommady.'],
       ['04', 'Rights & dignity', 'Making sure every voice is heard and every person can access their rights through THANAL STEP.'],
@@ -285,13 +285,13 @@ export const copy: Record<'en' | 'ml', CopyType> = {
         title: 'Super Speciality Medical Camp & Health Care',
         category: 'Health Care',
         image: '/images/medical-camp.png',
-        description: 'Super speciality medical camps led by Dr. K. Venugopal (Pulmonologist) and Dr. V. Jayaram (Cardiologist) offering free consultations, diagnosis, and medicines.',
+        description: 'Super speciality medical camps featuring eminent doctors such as Dr. K. Venugopal (Pulmonologist) and Dr. V. Jayaram (Cardiologist) offering free consultations, diagnosis, and medicines.',
         photos: [
           {
             id: 101,
             title: 'Super Speciality Medical Camp Consultation',
             image: '/images/medical-camp.png',
-            description: 'Super speciality medical camp led by Dr. K. Venugopal (Pulmonologist) and Dr. V. Jayaram (Cardiologist) offering free consultations and medicines.',
+            description: 'Super speciality medical camp featuring eminent doctors such as Dr. K. Venugopal (Pulmonologist) and Dr. V. Jayaram (Cardiologist) offering free consultations and medicines.',
           },
           {
             id: 102,
@@ -489,8 +489,8 @@ export const copy: Record<'en' | 'ml', CopyType> = {
       { role: 'ജോയിന്റ് സെക്രട്ടറി', name: 'വി. ടി. സുരേഷ്' },
       { role: 'ട്രഷറർ', name: 'എം. ഡി. രമേശൻ' },
     ],
-    history: 'വളരുന്ന കരുതൽ വലയം', historyBody: 'ആരോഗ്യപരിചരണത്തിലും വിദ്യാഭ്യാസത്തിലും പ്രത്യേക ശ്രദ്ധ നൽകുന്ന ഞങ്ങൾ, ഡോ. കെ. വേണുഗോപാൽ (പൾമണോളജിസ്റ്റ്), ഡോ. വി. ജയറാം (കാർഡിയോളജിസ്റ്റ്) തുടങ്ങിയ പ്രമുഖ ഡോക്ടർമാരെ ഉൾപ്പെടുത്തി സൂപ്പർ സ്പെഷ്യാലിറ്റി മെഡിക്കൽ ക്യാമ്പുകൾ സംഘടിപ്പിക്കുന്നു. കൂടാതെ, ഗുരുതര രോഗങ്ങൾ ബാധിച്ച നിർധനർക്ക് സാമ്പത്തിക സഹായവും, പാവപ്പെട്ട കുടുംബങ്ങളിലെ വിദ്യാർത്ഥികൾക്ക് വാർഷിക വിദ്യാഭ്യാസ സ്കോളർഷിപ്പുകളും നൽകുന്നു.',
-    activitiesLabel: 'ഞങ്ങൾ എത്തുന്ന ഇടങ്ങൾ', activitiesTitle: 'ആളുകൾ ഉള്ളിടത്ത്\nഎത്തുന്ന കരുതൽ.', activities: [['01', 'ആരോഗ്യപരിചരണം', 'ഡോ. കെ. വേണുഗോപാൽ (പൾമണോളജിസ്റ്റ്), ഡോ. വി. ജയറാം (കാർഡിയോളജിസ്റ്റ്) തുടങ്ങിയ പ്രമുഖ ഡോക്ടർമാരുടെ സൂപ്പർ സ്പെഷ്യാലിറ്റി മെഡിക്കൽ ക്യാമ്പുകളും ക്യാൻസർ രോഗികൾക്കുള്ള സാമ്പത്തിക പിന്തുണയും.'], ['02', 'വിദ്യാഭ്യാസം', 'സാമ്പത്തികമായി പിന്നാക്കം നിൽക്കുന്ന കുടുംബങ്ങളിലെ വിദ്യാർത്ഥികൾക്ക് വാർഷിക സ്കോളർഷിപ്പുകളും വിദ്യാഭ്യാസ സഹായവും.'], ['03', 'കൂട്ടായ കരുതൽ', 'ഭക്ഷണം, വീട്, സുരക്ഷ എന്നിവയ്ക്കായി അയൽക്കാർ ഒരുമിക്കുന്നു.'], ['04', 'അവകാശവും അന്തസ്സും', 'ഓരോ ശബ്ദവും കേൾക്കപ്പെടാനും അവകാശങ്ങൾ ലഭിക്കാനും ഉറപ്പാക്കുന്നു.']],
+    history: 'വളരുന്ന കരുതൽ വലയം', historyBody: 'ആരോഗ്യപരിചരണത്തിലും വിദ്യാഭ്യാസത്തിലും പ്രത്യേക ശ്രദ്ധ നൽകുന്ന ഞങ്ങൾ, ഡോ. കെ. വേണുഗോപാൽ (പൾമണോളജിസ്റ്റ്), ഡോ. വി. ജയറാം (കാർഡിയോളജിസ്റ്റ്) എന്നിവരെ പോലുള്ള പ്രമുഖ ഡോക്ടർമാരെ ഉൾപ്പെടുത്തി സൂപ്പർ സ്പെഷ്യാലിറ്റി മെഡിക്കൽ ക്യാമ്പുകൾ സംഘടിപ്പിക്കുന്നു. കൂടാതെ, ഗുരുതര രോഗങ്ങൾ ബാധിച്ച നിർധനർക്ക് സാമ്പത്തിക സഹായവും, പാവപ്പെട്ട കുടുംബങ്ങളിലെ വിദ്യാർത്ഥികൾക്ക് വാർഷിക വിദ്യാഭ്യാസ സ്കോളർഷിപ്പുകളും നൽകുന്നു.',
+    activitiesLabel: 'ഞങ്ങൾ എത്തുന്ന ഇടങ്ങൾ', activitiesTitle: 'ആളുകൾ ഉള്ളിടത്ത്\nഎത്തുന്ന കരുതൽ.', activities: [['01', 'ആരോഗ്യപരിചരണം', 'ഡോ. കെ. വേണുഗോപാൽ (പൾമണോളജിസ്റ്റ്), ഡോ. വി. ജയറാം (കാർഡിയോളജിസ്റ്റ്) എന്നിവരെ പോലുള്ള പ്രമുഖ ഡോക്ടർമാരുടെ സൂപ്പർ സ്പെഷ്യാലിറ്റി മെഡിക്കൽ ക്യാമ്പുകളും ക്യാൻസർ രോഗികൾക്കുള്ള സാമ്പത്തിക പിന്തുണയും.'], ['02', 'വിദ്യാഭ്യാസം', 'സാമ്പത്തികമായി പിന്നാക്കം നിൽക്കുന്ന കുടുംബങ്ങളിലെ വിദ്യാർത്ഥികൾക്ക് വാർഷിക സ്കോളർഷിപ്പുകളും വിദ്യാഭ്യാസ സഹായവും.'], ['03', 'കൂട്ടായ കരുതൽ', 'ഭക്ഷണം, വീട്, സുരക്ഷ എന്നിവയ്ക്കായി അയൽക്കാർ ഒരുമിക്കുന്നു.'], ['04', 'അവകാശവും അന്തസ്സും', 'ഓരോ ശബ്ദവും കേൾക്കപ്പെടാനും അവകാശങ്ങൾ ലഭിക്കാനും ഉറപ്പാക്കുന്നു.']],
     stepKicker: 'THANAL-ന്റെ പുതിയ പദ്ധതി', stepTitle: 'STEP — അതിരൂക്ഷ ദാരിദ്ര്യത്തിനെതിരെയുള്ള സാമൂഹ്യ കൂട്ടായ്മ', stepBody: 'STEP പദ്ധതിയുടെ ആശയം: "Micro Contribution – Macro Social Benefit" (ചെറിയ സംഭാവനകൾ – വലിയ സാമൂഹിക നേട്ടം). നിരവധി ആളുകളുടെ ചെറിയ സംഭാവനകൾ ഒരുമിച്ചുചേരുമ്പോൾ അതീവ ബുദ്ധിമുട്ടനുഭവിക്കുന്ന ഒരു കുടുംബത്തിന് വലിയ ആശ്വാസമായി മാറാൻ കഴിയും.',
     stepDetails: {
       badge: 'THANAL-ന്റെ പുതിയ പദ്ധതി',
@@ -605,7 +605,7 @@ export const copy: Record<'en' | 'ml', CopyType> = {
             id: 101,
             title: 'സൂപ്പർ സ്പെഷ്യാലിറ്റി മെഡിക്കൽ ക്യാമ്പ്',
             image: '/images/medical-camp.png',
-            description: 'ഡോ. കെ. വേണുഗോപാൽ (പൾമണോളജിസ്റ്റ്), ഡോ. വി. ജയറാം (കാർഡിയോളജിസ്റ്റ്) തുടങ്ങിയ പ്രമുഖ ഡോക്ടർമാരുടെ മെഡിക്കൽ പരിശോധനയും സൗജന്യ മരുന്ന് വിതരണവും.',
+            description: 'ഡോ. കെ. വേണുഗോപാൽ (പൾമണോളജിസ്റ്റ്), ഡോ. വി. ജയറാം (കാർഡിയോളജിസ്റ്റ്) എന്നിവരെ പോലുള്ള പ്രമുഖ ഡോക്ടർമാരുടെ മെഡിക്കൽ പരിശോധനയും സൗജന്യ മരുന്ന് വിതരണവും.',
           },
           {
             id: 102,
